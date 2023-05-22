@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/.editorconfig
+/ExampleApi.Windows/obj
+/ExampleApi.Windows/bin/Debug/net6.0
+/ExampleApi.Shared/bin/Debug/net6.0
+/ExampleApi.Shared/obj
+/ExampleApi/bin/Debug/net6.0
+/ExampleApi/obj
