@@ -18,7 +18,8 @@ namespace ExampleApi.Shared.EF
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer("Server=TAPWKST22;Database=erplus;Trusted_Connection=True;");
+            // change connection string here
+            optionsBuilder.UseSqlServer("Server=WKST;Database=erplus;Trusted_Connection=True;");
         }
 
     }

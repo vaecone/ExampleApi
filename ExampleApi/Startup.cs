@@ -11,6 +11,7 @@ namespace ExampleApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             // builder.Services.AddEndpointsApiExplorer();
 
@@ -37,7 +38,10 @@ namespace ExampleApi
             app.UseHttpsRedirection();
 
             // app.MapControllers();
+
+            // listening address + /$odata
             app.UseODataRouteDebug();
+
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
