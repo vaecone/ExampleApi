@@ -1,36 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExampleApi.Shared.Models
 {
-    [Table("Teams")]
     public class Team
     {
-
-        public int ID {get; set;}  
-
-        [Column("Bezeichnung")]
+        [Key]
+        public int ID { get; set; }
         public string Description { get; set; } = null;
-
-        [Column("Zustaendigkeit")]
-        public int? PersonInCharge {get; set;}
-
-        [Column("GueltigAb")] 
-        public DateTime? ValidFrom {get; set;}
-
-        [Column("GueltigBis")]
-        public DateTime? ValidTo {get; set; }
-
-        [Column("Kapazitaet")]
-        public int? Capacity {get; set;}
-
-        [Column("FahrzeugNr")]
-        public string VehicleNumber {get; set;} = null;
-
-        [Column("Notiz")]
+        public int? PersonInCharge { get; set; }
+        public DateTime? ValidFrom { get; set; }
+        public DateTime? ValidTo { get; set; }
+        public int? Capacity { get; set; }
+        public string VehicleNumber { get; set; } = null;
         public string Note { get; set; } = null;
-
-        [Column("Inaktiv")]
-        public Boolean IsInactive { get; set; } = false;  
+        public Boolean IsInactive { get; set; } = false;
 
     }
 }

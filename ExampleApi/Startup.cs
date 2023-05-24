@@ -49,6 +49,7 @@ namespace ExampleApi
         {
             var modelBuilder = new ODataConventionModelBuilder();
             modelBuilder.EntitySet<Team>("Teams");
+            modelBuilder.EntitySet<Movie>("Movies");
             return modelBuilder;
         }
 
