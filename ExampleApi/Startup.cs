@@ -1,6 +1,7 @@
 ﻿using ExampleApi.Shared.Models;
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.OData.NewtonsoftJson;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.OData.ModelBuilder;
 
 namespace ExampleApi
@@ -10,12 +11,12 @@ namespace ExampleApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            // services.AddControllers();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             // builder.Services.AddEndpointsApiExplorer();
 
-            services.AddControllers()
+            services.AddControllers().AddApplicationPart(typeof(MetadataController).Assembly)
                 .AddOData(options =>
                 {
                     options.AddRouteComponents("api/odata", ConfigureOdataModels().GetEdmModel());
